@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympus SRE</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center">Olympus SRE</h2>
+            <form action="/" method="post" class="mt-4">
+                {{ form.hidden_tag() }}
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    {{ form.email(class="form-control", id="email") }}
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    {{ form.password(class="form-control", id="password") }}
+                </div>
+
+                <div class="form-group">
+                    <label for="start_date">Start Date:</label>
+                    {{ form.start_date(class="form-control", id="start_date") }}
+                </div>
+
+                <div class="form-group">
+                    <label for="end_date">End Date:</label>
+                    {{ form.end_date(class="form-control", id="end_date") }}
+                </div>
+
+                <div class="form-group text-center">
+                    {{ form.submit(class="btn btn-primary") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Optional Bootstrap JS, jQuery and Popper.js for features like modals, tooltips, etc. -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Olympus SRE</title>
+</head>
+<body>
+    <h2>Olympus SRE</h2>
+    <form action="/" method="post">
+        {{ form.hidden_tag() }}
+        Email: {{ form.email() }}<br><br>
+        Password: {{ form.password() }}<br><br>
+        Start Date: {{ form.start_date() }}<br><br>
+        End Date: {{ form.end_date() }}<br><br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
